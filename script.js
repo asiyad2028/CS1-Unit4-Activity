@@ -9,6 +9,7 @@ const body = document.querySelector("body");
 const heading = document.querySelector("#main-heading");
 const description = document.querySelector("#description");
 const toggleBtn = document.querySelector("#toggle");
+const image = document.querySelector("#image");
 
 //Now we can change styles and attributes for those elements
 heading.style.color = "purple"; //JS wrote CSS code
@@ -29,7 +30,8 @@ if (darkMode==true){
     description.textContent = "Dark Mode";
     toggleBtn.textContent = "switch to light";
     toggleBtn.style.color= "darkblue";
-    toggleBtn.style.background= "lightblue"
+    toggleBtn.style.background= "lightblue";
+    image.src = "sunset.avif";
 }
 else{
     console.log("apply light mode styles");
@@ -40,7 +42,7 @@ else{
     toggleBtn.textContent= "switch to dark";
     toggleBtn.style.color= "darkpurple";
     toggleBtn.style.background ="lightpurple";
-
+    image.src = "sunrise.jpg";
 }
 
 }

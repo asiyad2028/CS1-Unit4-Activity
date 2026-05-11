@@ -44,7 +44,30 @@ else{
     toggleBtn.style.background ="lightpurple";
     image.src = "sunrise.jpg";
 }
-
 }
 // Attach the function to the button 
 toggleBtn.addEventListener("click",toggleMode); 
+
+//Review 
+//1. select the new element on the page (by id name)
+const hackerBtn = document.querySelector("#hacker");
+//2. Attach click event listener to the button 
+hackerBtn.addEventListener("click", setHacker);
+//3. Define the function that triggers when clicked 
+function setHacker() {
+    console.log("setting hacker theme...");
+    body.style.background = "rgb(41, 40, 40)";
+    body.style.color = "rgb(2, 60, 25)";
+    body.style.fontFamily = "monospace";
+    description.textContent = "You have been hacked";
+}
+
+const pastelBtn = document.querySelector("#pastel"); 
+pastelBtn.addEventListener("click", setPastel); 
+function setPastel () {
+    console.log("setting pastel theme...");
+    body.style.background = "rgb(253, 182, 251)";
+    body.style.color = "rgb(167, 196, 241)"; 
+    body.style.fontFamily = "monospace"; 
+    description.textContent = "PASTEL MODE";
+}

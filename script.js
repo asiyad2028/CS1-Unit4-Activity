@@ -60,6 +60,7 @@ function setHacker() {
     body.style.color = "rgb(2, 60, 25)";
     body.style.fontFamily = "monospace";
     description.textContent = "You have been hacked";
+    image.src="hacker.jpg";
 }
 
 const pastelBtn = document.querySelector("#pastel"); 
@@ -70,4 +71,17 @@ function setPastel () {
     body.style.color = "rgb(167, 196, 241)"; 
     body.style.fontFamily = "monospace"; 
     description.textContent = "PASTEL MODE";
+    image.src = "pastel.avif";
 }
+
+const summerBtn = document.querySelector("#summer"); 
+summerBtn.addEventListener("click", setSummer);
+function setSummer () {
+    console.log("setting summer theme...");
+    body.style.background = "rgb(136, 217, 255)";
+    body.style.fontFamily = "monospace";
+    description.textContent = "SUMMER MODE";
+    image.src = "summer.jpg";
+}
+
+const springBtn = document.querySelector("#spring"); 

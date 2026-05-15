@@ -10,6 +10,7 @@ const heading = document.querySelector("#main-heading");
 const description = document.querySelector("#description");
 const toggleBtn = document.querySelector("#toggle");
 const image = document.querySelector("#image");
+const emoji = document.querySelector("#emoji"); 
 
 //Now we can change styles and attributes for those elements
 heading.style.color = "purple"; //JS wrote CSS code
@@ -61,11 +62,12 @@ function setHacker() {
     body.style.fontFamily = "monospace";
     description.textContent = "You have been hacked";
     image.src="hacker.jpg";
+    emoji.classList.add("animated");
 }
 
 const pastelBtn = document.querySelector("#pastel"); 
 pastelBtn.addEventListener("click", setPastel); 
-function setPastel () {
+function setPastel() {
     console.log("setting pastel theme...");
     body.style.background = "rgb(253, 182, 251)";
     body.style.color = "rgb(167, 196, 241)"; 
@@ -76,7 +78,7 @@ function setPastel () {
 
 const summerBtn = document.querySelector("#summer"); 
 summerBtn.addEventListener("click", setSummer);
-function setSummer () {
+function setSummer() {
     console.log("setting summer theme...");
     body.style.background = "rgb(136, 217, 255)";
     body.style.fontFamily = "monospace";
@@ -85,3 +87,11 @@ function setSummer () {
 }
 
 const springBtn = document.querySelector("#spring"); 
+springBtn.addEventListener("click", setSpring);
+function setSpring() {
+    console.log("setting spring theme...");
+    body.style.background = "rgb(250, 171, 236)";
+    body.style.fontFamily = "monospace"; 
+    description.textContent = "SPRING MODE"; 
+    image.src = "spring.webp";
+}
